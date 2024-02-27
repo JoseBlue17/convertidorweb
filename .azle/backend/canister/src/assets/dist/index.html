@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Convertidor_Fotovoltaico</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-ZpJM8qne.css">
+</head>
+<body>
+    
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#horapico" onclick="seleccionar()">HORAS PICO</a></li>
+                    <li><a href="#sistemaOFF" onclick="seleccionar()">SIST. OFF</a></li>
+                    <li><a href="#sistemaON" onclick="seleccionar()">SIST. ON</a></li>
+                    <li><a href="#redes" onclick="seleccionar()">REDES</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-seccion">
+            <h1>Convertidor Fotovoltaico</h1>
+            <p><span>La energía solar fotovoltaica se está volviendo más popular para los hogares. Calcular la cantidad correcta de paneles solares que se necesitan puede ser complicado, ya que depende de factores como ubicación, horas de sol, consumo energético y área de techo disponible. Hacer estos cálculos manualmente requiere mucho tiempo y conocimientos técnicos.</span></p> 
+        
+            <p><span>Una buena calculadora solar en línea que considere todos los factores y entregue una recomendación precisa sobre la cantidad y potencia de los paneles sería muy útil. Simplificaría el proceso para los propietarios interesados en energía solar, permitiéndoles dimensionar su sistema sin necesidad de un ingeniero.</span></p> 
+        <div style="text-align:center; ">
+        <img src="https://th.bing.com/th/id/OIG1.obj.IzyuqIiaZ40W2O5s?pid=ImgGn" width="400" height="400"  >
+        </div>
+        
+    </section>
+
+</section>
+<!-- SECCION CALCULAR -->
+
+
+<section class="convertidors" id="convertidors">
+    <div class="contenido-seccion">
+        <h1>Calcular Cantidad de Paneles Solares</h1>
+        <div class="fila">
+            <!-- Technical Skill -->
+            <div class="col">
+                <div class="convertidor">
+                    <div class="input-group">
+                        <input type="number" id="Consumo" placeholder="Consumo Diario" step="0.001" oninput="calcular()"><br><br>
+                        <div class="input-group-append">
+                        <span class="input-group-text">W</span>
+                    </div>
+                </div>
+            </div>   
+        
+                <div class="convertidor">
+                    <div class="input-group">
+                    <input type="number" id="Hora" placeholder="Horas Pico" step="0.001" oninput="calcular()"><br><br>
+                    <div class="input-group-append">
+                    <span class="input-group-text">h</span>
+            </div>
+         </div>
+    </div>   
+</div> 
+
+      
+<div class="fila">
+    <!-- Columna 2 -->
+    <div class="col">
+                <div class="convertidor">
+                    <div class="input-group">
+                        <input type="number" id="Potencia" placeholder="Potencia Panel" step="0.001" oninput="calcular()"><br><br>
+                        <div class="input-group-append">
+                        <span class="input-group-text">W</span>
+                    </div>
+                </div>
+            </div>
+          
+                <div class="convertidor">
+                    <div class="input-group">
+            
+                    <input type="number" id="total" placeholder="Total de Paneles" step="0.001" oninput="calcular()"><br><br>
+                    <div class="input-group-append">
+                    <span class="input-group-text">Cant</span>
+                    </div>
+                 </div>
+             </div> 
+        </div>  
+    </div>         
+</div>  
+</div> 
+</div> 
+
+</section>
+
+<script type = "text/javascript">
+
+function calcular(){
+try{
+
+var a= parseFloat(document.getElementById("Consumo").value) || 0;        
+var b= parseFloat(document.getElementById("Hora").value) || 0; 
+var c= parseFloat(document.getElementById("Potencia").value) || 0;  
+var total = (a*1.3)/(b*c);
+document.getElementById("total").value = Math.ceil(total);
+}catch (e){}
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+<!-- SECCION HORA PICO -->
+<section id="horapico" class="horapico">
+    <div class="contenido-seccion2">
+        
+        
+   
+        <h1>Horas Pico⛅</h1>
+        <p><span>Las horas sol pico son las horas centrales del día (11am - 4pm) cuando la radiación solar es más intensa debido a que el sol está más alto en el cielo. En estas horas se registran los valores máximos de irradiancia solar (potencia por unidad de superficie), con valores típicos de 1000 W/m2 en zonas tropicales.
+        </span></p> 
+        <p><span>Aprovechar las horas de máxima irradiación es clave en sistemas fotovoltaicos para maximizar la producción eléctrica también nos ayuda a saber la irradiancia máximos y esto nos permite dimensionar adecuadamente los sistemas en términos de paneles, inversores, cableado, etc. Si desea saber las horas pico del lugar en donde vive acceda al siguiente link:</span></p> 
+        <a href="https://power.larc.nasa.gov/data-access-viewer/"> https://power.larc.nasa.gov/data-access-viewer/</a>
+    </div>
+</section>
+   
+<!-- SECCION SISTEMA OFF Y GRIND -->
+<section id="sistemaOFF" class="sistemaOFF">
+    <div class="contenido-seccion3">
+        <h1>Sistema Off-Grid⚡</h1>
+        <p><span>No está conectado a la red eléctrica convencional. Trabaja de forma aislada o autónoma. Requiere baterías para almacenar la energía producida por los paneles fotovoltaicos y abastecer la demanda cuando no hay sol.
+            	Requiere un regulador de carga para proteger las baterías y controlar los flujos de energía. Se utiliza en zonas rurales sin acceso a la red, sistemas de respaldo y consumos eléctricos aislados.
+            </span></p> 
+            <div style="text-align:center; ">
+                
+            <img src="https://enerlife.cl/wp-content/uploads/2022/01/offgrid-comofunciona-1024x469.jpg" width="400" height="200" style="margin:auto; display:block;">
+               </div>
+            </div>
+        </section> 
+               <section id="sistemaON" class="sistemaON">
+                <div class="contenido-seccion4">
+                <h1>Sistema On-Grid⚡</h1>
+                <p><span>Está conectado físicamente a la red eléctrica convencional, no necesita baterías, vierte directamente la energía producida por los paneles a la red.
+            	Requiere inversores para transformar la corriente continua en alterna y sincronizarse con la red. El consumo eléctrico se toma de la red cuando la producción solar no alcanza.
+                <div style="text-align:center; ">
+                   
+                <img src="https://enerlife.cl/wp-content/uploads/2022/01/ongrid-comofunciona-1024x469.jpg" width="400" height="200" style="margin:auto; display:block;"> 
+            </span></p> 
+        </div>
+     </div>
+</section>      
+<!-- footer -->
+<footer>
+    <section id="redes" class="redes"></section>
+    <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <div class="redes">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-skype"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-solid fa-rss"></i></a>
+    </div>
+</footer>
+</section>
+
+    
+
+</html>
